@@ -1,18 +1,7 @@
 # ui-avatar
 
-> A Vue.js project
+> An avatar component that will display an image if provided an image, or two letters pending no image prop is provided. It will also display an indicator circle depending on the state of the user. Passed a default state, the circle will not be visible. Passed a state of online, available, or dnd will result in the indicator being displayed with each respective color. 
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Technology
+ - Vue.js
+ - Vue CLI
