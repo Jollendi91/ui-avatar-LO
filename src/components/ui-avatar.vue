@@ -1,10 +1,18 @@
 <template>
     <div class="avatar" :style="{backgroundColor: color}">
-        <div v-if="toDisplay" class="indicator" :class="state"></div>
-        <p v-if="!image" class="icon" :title="label">{{ icon }}</p>
+        <div 
+            class="indicator" 
+            v-if="toDisplay"  
+            :class="state">
+        </div>
+        <p 
+            class="icon" 
+            v-if="!image"  
+            :title="label">{{ icon }}
+        </p>
         <img 
-            v-if="image"
             class="avatar-image"
+            v-if="image"
             :src="image" 
             :alt="'avatar of ' + label">
     </div>
