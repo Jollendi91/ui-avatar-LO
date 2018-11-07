@@ -1,12 +1,12 @@
 <template>
-    <div class="avatar">
-        <div class="indicator" :class="state"></div>
-        <p v-if="!image" :title="label">{{ icon }}</p>
+    <div class="avatar" :style="{backgroundColor: color}">
+        <div v-if="toDisplay" class="indicator" :class="state"></div>
+        <p v-if="!image" class="icon" :title="label">{{ icon }}</p>
         <img 
             v-if="image"
+            class="avatar-image"
             :src="image" 
-            :alt="'avatar of' + label"
-            >
+            :alt="'avatar of ' + label">
     </div>
 </template>
 
@@ -20,7 +20,17 @@
         },
         computed: {
             icon() {
-                return this.label.substring(0, 2).toUpperCase();
+                if(this.label) {
+                    return this.label.substring(0, 2).toUpperCase();
+                }
+            },
+            toDisplay() {
+                if (this.state && this.state !== 'default') {
+                    return true;
+                }
+                else {
+                    return false;
+                }
             }
         }
     }
@@ -36,12 +46,22 @@
         margin: 10px;
         border-radius: 50%;
         color: white;
-        background-color: grey;
         position: relative;
+        display: inline-block;
     }
 
-    .indicator, .default {
-        display: none;
+    p{
+        margin: 0;
+    }
+
+    .avatar-image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    .indicator {
         position: absolute;
         top: 0;
         right: 0;
@@ -49,7 +69,10 @@
         height: 15px;
         border: 2px solid white;
         border-radius: 50%;
-        background-color: red;
+    }
+
+    .default {
+        display: none;
     }
 
     .online {

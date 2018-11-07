@@ -1,5 +1,8 @@
 <template>
-  <ui-avatar label="Joshua Ollendick"></ui-avatar>
+  <div>
+    <ui-avatar label="Josh" state="default" color="lightgreen" image=""></ui-avatar>
+  </div>
+  
 </template>
 
 <script>
