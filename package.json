@@ -1,14 +1,12 @@
-/* 
-  Joshua Ollendick
-  Mobile - 319-321-1053
-  Email - joshua.ollendick@gmail.com
-*/
-
 {
   "name": "ui-avatar",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "Joshua Ollendick <joshua.ollendick@gmail.com>",
+  "author": {
+    "name": "Joshua Ollendick",
+    "email": "joshua.ollendick@gmail.com",
+    "url": "https://www.joshuaollendick.com/"
+  },
   "license": "MIT",
   "private": true,
   "scripts": {
