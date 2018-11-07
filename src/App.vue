@@ -1,6 +1,10 @@
 <template>
   <div>
-    <ui-avatar label="Josh" state="default" color="lightgreen" image=""></ui-avatar>
+    <ui-avatar 
+      label="Joshua Ollendick" 
+      image="https://c1.staticflickr.com/3/2813/33763063240_a966c3449e_q.jpg"
+      state="available" 
+      color="lightgreen"></ui-avatar>
   </div>
   
 </template>
