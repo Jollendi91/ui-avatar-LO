@@ -5,3 +5,5 @@
 ## Technology
  - Vue.js
  - Vue CLI
+ - Vue Test Utils
+ - Jest
